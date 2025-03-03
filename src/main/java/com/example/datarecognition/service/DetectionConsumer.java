@@ -4,7 +4,6 @@ import com.example.datarecognition.entity.Detection;
 import com.example.datarecognition.model.DetectionEvent;
 import com.example.datarecognition.repository.DetectionRepository;
 import com.example.datarecognition.utils.DetectionMapper;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +41,7 @@ public class DetectionConsumer {
             System.out.println("Stored " + detectionEntities.size() + " detections to MongoDB");
         } catch (Exception e) {
             logger.error("Error processing detections: " + e.getMessage());
-            e.printStackTrace();
+//            e.printStackTrace();
         }
     }
 }
